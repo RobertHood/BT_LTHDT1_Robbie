@@ -28,8 +28,6 @@ class Main {
         String ftename = sc.nextLine();
         System.out.print("Type paymentPerHour: ");
         int ftepaymentPerHour = Integer.parseInt(sc.nextLine());
-        System.out.print("Type workingHours: ");
-        int fteworkingHour = Integer.parseInt(sc.nextLine());
         FullTimeEmployee fte = new FullTimeEmployee(ftename, ftepaymentPerHour);
         System.out.println("Salary of " + fte.name + ": " + fte.calculateSalary());
     }
