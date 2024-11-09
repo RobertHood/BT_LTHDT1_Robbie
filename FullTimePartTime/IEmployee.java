@@ -3,8 +3,8 @@ package FullTimePartTime;
 import java.util.Scanner;
 
 interface IEmployee {
-    public int calculateSalary();
-    public String getName();
+    int calculateSalary();
+    String getName();
 }
 
 class Main {
@@ -19,8 +19,8 @@ class Main {
         int ptepaymentPerHour = Integer.parseInt(sc.nextLine());
         System.out.print("Type workingHours: ");
         int pteworkingHour = Integer.parseInt(sc.nextLine());
-        PartTimeEmployee pte = new PartTimeEmployee(ptename, ptepaymentPerHour, pteworkingHour);
-        System.out.println("Salary of " + pte.name + ": " + pte.calculateSalary());
+        IEmployee pte = new PartTimeEmployee(ptename, ptepaymentPerHour, pteworkingHour);
+        System.out.println("Salary of " + pte.getName() + ": " + pte.calculateSalary());
 
         //FTE
         System.out.print("Calculate salary of FullTimeEmployee: \n");
@@ -28,7 +28,7 @@ class Main {
         String ftename = sc.nextLine();
         System.out.print("Type paymentPerHour: ");
         int ftepaymentPerHour = Integer.parseInt(sc.nextLine());
-        FullTimeEmployee fte = new FullTimeEmployee(ftename, ftepaymentPerHour);
-        System.out.println("Salary of " + fte.name + ": " + fte.calculateSalary());
+        IEmployee fte = new FullTimeEmployee(ftename, ftepaymentPerHour);
+        System.out.println("Salary of " + fte.getName() + ": " + fte.calculateSalary());
     }
 }
