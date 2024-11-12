@@ -30,6 +30,12 @@ public class MatHang {
     public float getGia(){
         return gia;
     }
+    public int getSoLuongKho(){
+        return soLuongKho;
+    }
+    public String getTenMatHang(){
+        return tenMatHang;
+    }
     @Override
     public String toString() {
         return tenMatHang;
