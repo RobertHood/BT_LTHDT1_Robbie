@@ -12,22 +12,8 @@ public class KhachHang {
         this.tenKH = tenKH;
     }
 
-    public String getDiachi() {
-        return diachi;
-    }
-    public String getKhachHangID() {
-        return khachHangID;
-    }
-    public String getTenKH() {
-        return tenKH;
-    }
-    public void setDiachi(String diachi) {
-        this.diachi = diachi;
-    }
-    public void setKhachHangID(String khachHangID) {
-        this.khachHangID = khachHangID;
-    }
-    public void setTenKH(String tenKH) {
-        this.tenKH = tenKH;
+    @Override
+    public String toString() {
+        return "[ID Khách hàng: " + khachHangID + ",Tên Khách hàng: " + tenKH + ", Địa chỉ: " + diachi + "]";
     }
 }

@@ -3,14 +3,12 @@ package QuanLyBanHang;
 import java.util.ArrayList;
 
 public class MatHang {
-    private static ArrayList<MatHang> mathang = new ArrayList<>(); //kho
+    private static ArrayList<MatHang> mathang = new ArrayList<>(); //dùng arraylist tượng trưng kho hàng
     private float gia;
     private String matHangID; //đổi sang String để có thể phân biệt với ID của những class khác
     private int soLuongKho;
     private String tenMatHang;
     private static int stt = 1;
-
-    public MatHang() {}
 
     public MatHang(float gia, int soLuongKho, String tenMatHang) {
         this.gia = gia;
@@ -31,5 +29,9 @@ public class MatHang {
     }
     public float getGia(){
         return gia;
+    }
+    @Override
+    public String toString() {
+        return tenMatHang;
     }
 }
