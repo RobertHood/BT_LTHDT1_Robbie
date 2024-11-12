@@ -3,22 +3,33 @@ package QuanLyBanHang;
 import java.util.ArrayList;
 
 public class MatHang {
-    private ArrayList<MatHang> mathang;
+    private static ArrayList<MatHang> mathang = new ArrayList<>(); //kho
     private float gia;
     private String matHangID; //đổi sang String để có thể phân biệt với ID của những class khác
-    private int soLuong;
+    private int soLuongKho;
     private String tenMatHang;
     private static int stt = 1;
 
-    public MatHang(float gia, int soLuong, String tenMatHang) {
+    public MatHang() {}
+
+    public MatHang(float gia, int soLuongKho, String tenMatHang) {
         this.gia = gia;
         this.matHangID = String.format("MH%02d", stt++);
-        this.soLuong = soLuong;
+        this.soLuongKho = soLuongKho;
         this.tenMatHang = tenMatHang;
-        this.mathang = new ArrayList<MatHang>();
     }
 
     public void ThemMatHangVaoKho(){
-        mathang.add(new MatHang(gia, soLuong, tenMatHang));
+        mathang.add(this);
+    }
+    public static void printMathang() {
+        for (MatHang mh : mathang) {
+            System.out.println("ID: " + mh.matHangID + ", Tên: " + mh.tenMatHang + ", Giá: " + mh.gia + ", Số lượng: " + mh.soLuongKho); }
+    }
+    public String getMatHangID(){
+        return matHangID;
+    }
+    public float getGia(){
+        return gia;
     }
 }

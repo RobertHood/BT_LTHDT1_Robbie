@@ -10,7 +10,7 @@ public class HoaDon {
     private ArrayList<MatHangMua> MatHangMuaList;
     private static int stt = 1;
 
-    public HoaDon(int HoaDonID, String ngayBan, float tongTien, KhachHang kh) {
+    public HoaDon(String ngayBan, float tongTien, KhachHang kh) {
         this.HoaDonID = String.format("HD%02d", stt++);
         this.ngayBan = ngayBan;
         this.tongTien = tongTien;
@@ -18,7 +18,7 @@ public class HoaDon {
         this.kh = kh;
     }
     public void InHoaDon(){
-        System.out.println("HoaDonID: " + HoaDonID + "\n NgayBan: " + ngayBan + "\n TongTien: " + tongTien + "\n KhachHang: " + kh);
+        System.out.println("HoaDonID: " + HoaDonID + "| NgayBan: " + ngayBan + "| TongTien: " + tongTien + "| KhachHang: " + kh);
     }
     public void ThemHoaDon(MatHangMua matHangMua){
         MatHangMuaList.add(matHangMua);
