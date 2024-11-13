@@ -3,25 +3,25 @@ package QuanLyHoaDonBanHang;
 import java.util.ArrayList;
 
 public class OrderList {
-    private ArrayList<Order> order;
+    private ArrayList<Order> orders;
 
     public OrderList() {
-        this.order = new ArrayList<>();
+        this.orders = new ArrayList<>();
     }
 
     public void add(Order ord) {
-        order.add(ord);
+        orders.add(ord);
     }
 
     public void remove(Order ord) {
-        order.remove(ord);
+        orders.remove(ord);
     }
 
     public int getCount() {
-        return order.size();
+        return orders.size();
     }
 
     public OrderIterator getOIterator() {
-        return new OrderIterator(order);
+        return new OrderIterator(orders);
     }
 }
