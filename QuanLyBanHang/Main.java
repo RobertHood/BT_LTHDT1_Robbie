@@ -18,8 +18,8 @@ public class Main {
 
         HoaDon hoadonA = new HoaDon("12/11/2024",khachhangA);
 
-        MatHangMua mhmX = new MatHangMua(20, hoadonA, mathangX);
-        MatHangMua mhmY = new MatHangMua(20, hoadonA, mathangY);
+        MatHangMua mhmX = new MatHangMua(20, mathangX.getMatHangID(), hoadonA, mathangX);
+        MatHangMua mhmY = new MatHangMua(20, mathangY.getMatHangID(), hoadonA, mathangY);
 
         mhmX.ThemMatHangMuaCuaHoaDon(mhmX,mathangX);
         mhmY.ThemMatHangMuaCuaHoaDon(mhmY,mathangY);
